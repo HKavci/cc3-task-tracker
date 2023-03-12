@@ -35,7 +35,7 @@ const AddTask = ({getData}) => {
           <label htmlFor="inputDate" className="form-label">Date & Time</label>
           <input type="datetime-local" className="form-control" id="inputDate" value={date} onChange={(e)=>setDate(e.target.value)} required />
         </div>
-        <button type="submit" className="btn btn-warning d-flex mx-auto">Add Task</button>
+        <button type="submit" className="btn btn-warning d-flex mx-auto" disabled={!task.trim()}>Add Task</button>
       </form>
   )
 }
