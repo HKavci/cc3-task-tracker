@@ -7,7 +7,7 @@ const AddTask = ({getData}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const newTask = {date: new Date(date).toLocaleString(), task}
+    const newTask = {date: new Date(date).toLocaleString().slice(0,16), task}
     postTask(newTask)
     setTask("")
     setDate("")
